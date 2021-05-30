@@ -1,9 +1,9 @@
 // EX3.: Create a table with 4 rows and 5 columns (ID, Name, Surname, Age, Email)
 const infos = [
     {ID: "2121", Name: "Jo", Surname: "Doe", Age: 28, Email: "jo@hotmail.com"},
-    {ID: "2121", Name: "Joe", Surname: "Dory", Age: 58, Email: "joe@gmail.com"},
-    {ID: "2121", Name: "John", Surname: "Dan", Age: 38, Email: "john@email.com"},
-    {ID: "2121", Name: "Jose", Surname: "Dani", Age: 48, Email: "jose@gmail.com"}
+    {ID: "1121", Name: "Joe", Surname: "Dory", Age: 58, Email: "joe@gmail.com"},
+    {ID: "9121", Name: "John", Surname: "Dan", Age: 38, Email: "john@email.com"},
+    {ID: "0121", Name: "Jose", Surname: "Dani", Age: 48, Email: "jose@gmail.com"}
 
 ]
  function aTableHead(table, data){
@@ -16,6 +16,8 @@ const infos = [
          row.appendChild(th)
      }
  }
+
+//populating the info to the table
 
 function aTable(table, data){
     for (let elem of data){
@@ -33,6 +35,14 @@ function aTable(table, data){
  aTableHead(table, data)
  aTable(table, infos)
 // EX4.: Add a link to a Facebook profile for each of the IDs
+function link(){
+    let firstRow = document.getElementsByTagName("td")
+    for (let i = 0; i < firstRow.length; i++){
+        let row = firstRow[0]
+        row.innerHTML = 
+    }
+}
+link()
 // EX5.: Add a text input "textChange" for plain text
 // EX6.: Add a button next to "textChange", when pressed the title and the H1 of the page must be changed with the content of "textChange"
 // EX7.: When the button is pressed, if "textChange" is empty, alert the user with a message

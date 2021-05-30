@@ -66,8 +66,11 @@ button.addEventListener("click", function(){
 })
 // EX7.: When the button is pressed, if "textChange" is empty, alert the user with a message
 // EX8.: Add a new section with title "Enrolled Students"
+
 // EX9.: Add an empty UL or DIV inside this new section
 // EX10.: Add an extra column to the Table named "actions"
+let newTable = document.querySelector("section")
+
 // EX11.: Add a button in each "action cell" with a "+" sign. When the button is pressed a new line must appear inside the "UL / DIV" in the enrolled section list
 // EX12.: Add button for each item of the list. When pressed, the student is removed from the list. 
 // EX13.: Create a simple form with 5 fields: ID, Name, Surname, Age, Email

@@ -36,10 +36,14 @@ function aTable(table, data){
  aTable(table, infos)
 // EX4.: Add a link to a Facebook profile for each of the IDs
 function link(){
-    let firstRow = document.getElementsByTagName("td")
-    for (let i = 0; i < firstRow.length; i++){
-        let row = firstRow[0]
-        row.innerHTML = 
+    let firstRow = document.getElementsByTagName("tr")
+    // console.log(firstRow)
+    for (let i = 1; i < firstRow.length; i++){
+        let row = firstRow[i].children[0]
+        let random = Math.floor(Math.random()*100)
+        // console.log(random)
+        row.innerHTML = `<a href="https://www.facebook.com/">${random}</a>`
+    
     }
 }
 link()

@@ -56,8 +56,13 @@ button.addEventListener("click", function(){
     let imput = document.getElementById("txt").value
     let h1 = document.querySelector("h2")
     let title = document.getElementsByTagName("title")[0]
-    h1.innerText = imput
-    title.innerText = imput
+    if (imput.length === 0){
+        alert("Its Empty. Write something")
+    } else {
+        h1.innerText = imput
+        title.innerText = imput
+    }
+    
 })
 // EX7.: When the button is pressed, if "textChange" is empty, alert the user with a message
 // EX8.: Add a new section with title "Enrolled Students"

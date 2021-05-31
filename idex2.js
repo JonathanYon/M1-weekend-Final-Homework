@@ -69,8 +69,30 @@ button.addEventListener("click", function(){
 
 // EX9.: Add an empty UL or DIV inside this new section
 // EX10.: Add an extra column to the Table named "actions"
-let newTable = document.querySelector("section")
 
+{
+	var tblHeadObj = document.getElementById(tblSample).tHead;
+	for (var h=0; h<tblHeadObj.rows.length; h++) {
+		var newTH = document.createElement('th');
+		tblHeadObj.rows[h].appendChild(newTH);
+		newTH.innerHTML = '[th] row:' + h + ', cell: ' + (tblHeadObj.rows[h].cells.length - 1)
+	}
+
+	var tblBodyObj = document.getElementById(tblSample).tBodies[0];
+	for (var i=0; i<tblBodyObj.rows.length; i++) {
+		var newCell = tblBodyObj.rows[i].insertCell(-1);
+		newCell.innerHTML = '[td] row:' + i + ', cell: ' + (tblBodyObj.rows[i].cells.length - 1)
+	}
+}
+function deleteColumn(tblId)
+{
+	var allRows = document.getElementById(tblSample).rows;
+	for (var i=0; i<allRows.length; i++) {
+		if (allRows[i].cells.length > 1) {
+			allRows[i].deleteCell(-1);
+		}
+	}
+}
 // EX11.: Add a button in each "action cell" with a "+" sign. When the button is pressed a new line must appear inside the "UL / DIV" in the enrolled section list
 // EX12.: Add button for each item of the list. When pressed, the student is removed from the list. 
 // EX13.: Create a simple form with 5 fields: ID, Name, Surname, Age, Email
